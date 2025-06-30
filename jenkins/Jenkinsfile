@@ -71,6 +71,8 @@
                         reportFiles: 'index.html',
                         reportName: 'Frontend Coverage Report'
                     ]
+                }
+            }
         }
     }
-}
+}  
