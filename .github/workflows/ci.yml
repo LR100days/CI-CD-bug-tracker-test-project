@@ -35,6 +35,9 @@ jobs:
 
               go test -v ./... 2>&1 | go-junit-report > test-results.xml
 
+              mkdir -p reports
+              mv coverage.html reports/
+
           - name: Publish Backend Test Results
             uses: dorny/test-reporter@v1
             if: always()
