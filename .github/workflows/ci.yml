@@ -33,6 +33,9 @@ jobs:
 
               echo '```' >> $GITHUB_STEP_SUMMARY
 
+              mkdir -p reports
+              mv coverage.html reports/
+              
               go test -v ./... 2>&1 | go-junit-report > test-results.xml
 
           - name: Publish Backend Test Results
