@@ -42,6 +42,15 @@ jobs:
                 npm ci
                 npm test
 
+            - name: Publish Github Test results
+              uses: dorny/test-reporter@v1
+              if: always()
+              with:
+                name: Frontend Unit Tests Report
+                path: bugtracker-frontend/test-results.xml
+                reporter: jest-junit
+
+
 
 
 
